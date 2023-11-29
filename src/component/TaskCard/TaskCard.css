@@ -1,0 +1,137 @@
+.task-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(73, 113, 116, 0.8);
+    padding: 16px;
+    max-width: 300px;
+    margin: 16px;
+    font-family: 'Arial', sans-serif;
+    flex: 1; /* Grow to fill available space */
+    min-width: calc(30% - 16px); /* Subtract the gap from the width */
+    max-width: calc(25% - 16px); /* Ensure cards don't grow beyond 25% minus gap */
+    box-sizing: border-box;
+  }
+
+  
+  .task-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .task-card-header h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .task-card-header input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+  
+  .task-card-timer {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .task-card-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .task-card-info div {
+    text-align: center;
+  }
+  
+  .task-card-info i {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .task-card-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  .edit-btn{
+    background-color: #497174;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+  }
+  .delete-btn{
+    background-color: #EB6440;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+  }
+  .edit-btn:hover{
+    opacity: 0.8;
+  }
+  .delete-btn:hover{
+    opacity: 0.8;
+  }
+  .task-card-actions .edit,
+  .task-card-actions .delete {
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .task-card-actions .edit {
+    background-color: #497174;
+  }
+  
+  .task-card-actions .delete {
+    background-color: #EB6440;
+  }
+  
+  /* If you're using SVGs or image icons, add the appropriate CSS classes here. */
+  /* For example: */
+  .task-card-info .start-date-icon,
+  .task-card-info .end-date-icon,
+  .task-card-info .time-icon,
+  .task-card-info .priority-icon,
+  .task-card-info .status-icon {
+    font-size: 20px; /* Adjust size as needed */
+    color: #3498db; /* Adjust icon color as needed */
+  }
+  .remaining-time{
+    color: #e74c3c;
+  }
+  .task-actions{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+  }
+
+
+
+    
+  
+  /* You can also add a media query for smaller screens if the cards get too squished */
+  @media (max-width: 1200px) {
+    .task-card {
+      min-width: calc(45% - 16px); /* Show 2 cards per row on smaller screens */
+      max-width: calc(45% - 16px);
+    }
+  }
+  
+/* For even smaller screens, you might want to stack the cards */
+@media (max-width: 768px) {
+    .task-card {
+      min-width: 100%; /* Each card takes full width */
+      max-width: 100%;
+    }
+  }

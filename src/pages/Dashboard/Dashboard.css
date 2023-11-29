@@ -1,0 +1,55 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Adjust if necessary */
+  }
+  
+  .dashboard-body {
+    display: flex;
+    flex: 1; /* Takes up the remaining space */
+  }
+  
+  .sidebar {
+    width: 250px; /* Adjust width as needed */
+    /* other styles */
+  }
+  
+  .dashboard-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .search-container {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    position: relative; /* Position relative for absolute positioning of the icon */
+  }
+  
+  .search-input {
+    padding: 8px 16px 8px 35px; /* Adjust left padding to make space for the icon */
+    border-radius: 15px;
+    border: 1px solid #D6E4E5;
+    outline: none;
+  }
+  .search-input:hover {
+    border: 1px solid #D6E4E5;
+  }
+  .search-input:focus {
+    padding: 8px 16px 8px 35px; /* Adjust left padding to make space for the icon */
+    border: 1px solid #497174;
+  }
+  
+  .search-icon {
+    position: absolute; /* Position the icon absolutely within the container */
+    left: 10px; /* Distance from the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Align center */
+    color: #ccc;
+  }
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+  }
