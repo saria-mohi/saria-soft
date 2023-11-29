@@ -25,15 +25,13 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Task Management System</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var location = window.location.href;
-          var pathname = location.split('#')[0].split('?')[0];
-          if (location !== pathname) {
-            window.history.replaceState(null, null, pathname);
-          }
-        });
-      </script>
+    <script type="text/javascript">
+      // Check if the page is a 404 not found page
+      if (document.location.pathname.indexOf('./404.html') !== -1) {
+        // Redirect to the homepage (`index.html`), while preserving the pathname
+        document.location.href = './index.html' + document.location.pathname;
+      }
+    </script>
       
   </head>
   <body>
