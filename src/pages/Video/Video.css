@@ -1,0 +1,15 @@
+.video-container {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing as needed */
+  }
+  
+  video {
+    margin: 0 10px; /* Optional: adds margin between videos */
+  }
+  @media (max-width: 768px) {
+    .video-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
